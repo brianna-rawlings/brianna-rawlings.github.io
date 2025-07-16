@@ -1,540 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Brianna Rawlings</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: DevFolio
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brianna Rawlings | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- ====== HEADER / NAV ====== -->
+  <header>
+    <nav>
+      <h1 class="logo">Brianna Rawlings</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero">
+    <h2>Hey! I'm Brianna.</h2>
+    <p>CS Digital Media & Data Science Student @ <a href="https://www.taylor.edu/" target="_blank">Taylor University</a> !</p>
+  </section>
 
-      <h1 class="logo"><a href="index.html">BRawlings</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a Computer Science and Digital Media student at Taylor University with a minor in Data Science. I’m passionate about building data-driven solutions that blend technology, sports, and human performance.
+    <br>
+    <br>
+    As an athlete and captain of the Women’s Soccer Team, I bring firsthand experience in sports performance and recovery, fueling my drive to innovate in wearable tech and sports analytics. Recently, I built an interactive WHOOP dashboard that explores how sleep, strain, and HRV affect recovery and performance; combining data science, machine learning, and interactive visualization.
+    <br>
+    <br>
+    My technical toolkit includes Python, R, JavaScript, HTML/CSS, Django, and frameworks like Streamlit and Jupyter Notebooks. I’m also experienced in full-stack development, web design, and digital media. These skills I developed through coursework and my role as a Jr. Course Designer at Taylor University Online.
+    <br>
+    <br>
+    This summer, I’m interning at Ardalyst on an AI-driven project focused on automating federal proposal analysis and response generation. The work involves benchmarking top large language models (including OpenAI’s GPT-4), prototyping secure AI workflows using low-code tools, and addressing data security challenges in AI systems. This role is sharpening my skills in prompt engineering, API automation, and security-first AI design.
+    <br>
+    <br>
+    When I’m not coding or on the field, you’ll find me outdoors fishing, hiking, or camping and I love country music and ice cream!
+    </p>
+  </section>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a href="about.html" class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Interests</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a class="nav-link scrollto " href="#blog">Blog</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+  <!-- ====== PROJECTS SECTION ====== -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <img src="images/ardalyst.jpeg" alt="Automated Proposal Analysis Project overview" />
+        <h3>Internship @ Ardalyst : Automated Proposal Analysis & Response Generation</h3>
+        <p>
+          Currently developing a secure AI-powered system to automate proposal analysis and response generation.  
+          Gaining hands-on experience with LLM comparison, prompt engineering, and API automation using tools like n8n and LangChain.  
+          Emphasizing security-first design principles and thorough documentation of technical findings.
+          <br><strong>Status:</strong> Active internship (project in progress)  
+          <br><strong>Tech:</strong> Python, LLMs, API automation, AI security.
+        </p>
+        <!-- No GitHub link yet since project is ongoing -->
+      </div>
+      <div class="project">
+        <img src="images/whoop-dashboard.png" alt="Screenshot of WHOOP Recovery Dashboard" />
+        <h3>WHOOP Wearable Recovery Dashboard</h3>
+        <p>
+          An interactive Streamlit dashboard analyzing sleep, strain, and HRV for athletic recovery.
+          <br><strong>Tech:</strong> Python, Streamlit, Jupyter.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/brianna-rawlings/wearable-dashboard" target="_blank" aria-label="GitHub Repo">
+            <!-- GitHub icon SVG -->
+            <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 005.47 7.59c.4.07.55-.17.55-.38
+                  0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                  0-.53.63-.01 1.08.58 1.23.82.72 1.2 1.87.86 2.33.66.07-.52.28-.86.51-1.06-1.78-.2-3.64-.89-3.64-3.95
+                  0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 012.01-.27c.68 0 1.36.09 2.01.27
+                  1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                  0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+              
+              <!-- Truncated for brevity, I’ll give you the full SVG below -->
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="project">
+        <img src="images/todo.jpeg" alt="Screenshot of Taylor University Registrar Web App" />
+        <h3>Taylor University Registrar – Scheduling Web App</h3>
+        <p>
+          Partnered with a student team to design and build a Django web app that streamlines classroom scheduling and workload allocation for department chairs.
+          Revamped the manual process to balance professor workloads and distribute class schedules fairly, saving countless hours.
+          Contributed front-end pages with HTML/CSS using Django templates and coordinated dynamic features with SQL.
+          <br><strong>Tech:</strong> Django, SQL, Python, HTML, CSS, Agile.
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/readtu/S25ISD2PM" target="_blank" aria-label="GitHub Repo">
+            <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 005.47 7.59c.4.07.55-.17.55-.38
+                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                0-.53.63-.01 1.08.58 1.23.82.72 1.2 1.87.86 2.33.66.07-.52.28-.86.51-1.06-1.78-.2-3.64-.89-3.64-3.95
+                0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 012.01-.27c.68 0 1.36.09 2.01.27
+                1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Repeat this .project block for each project -->
     </div>
-  </header><!-- End Header -->
+  </section>
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/B3.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">Brianna Rawlings</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Web Design, Student-Athlete, Sports Management, Data Analytics"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-        </div>
-      </div>
-    </div>
-  </div><!-- End Hero Section -->
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+    <p>Connect: 
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+  <button id="backToTop" title="Back to Top">↑</button>
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/babout.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Brianna Rawlings</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Student-Athlete, Web Designer</span></p>
-                        <p><span class="title-s">Email: </span> <span>brianna_rawlings@taylor.edu</span></p>
-                        <p><span class="title-s">Phone: </span> <span>(702) 575-1873</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">80%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">65%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Who Is Brianna?
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      Brianna, originally from Las Vegas, now in Noblesville, Indiana, enjoys 
-                      outdoor activities, country music, and time with friends. A Computer 
-                      Science-Digital Media student at <a href="https://www.taylor.edu/academics/departments/computer-science-engineering" >
-                        Taylor University</a>, she's passionate about 
-                      web design, sports management, and data analytics. As a Jr. Course Designer 
-                      at Taylor University Online, she enhances Brightspace. Actively developing 
-                      skills in HTML, CSS, JavaScript, and Python, she seeks summer 2024 internships 
-                      in sports, technology, analytics, and design.
-                    </p>
-                    <br>
-                    <a href="about.html" >Click Here For More About Me!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Interests
-              </h3>
-              <p class="subtitle-a">
-                Areas I am interested working in or learning more about!
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-                <p class="s-description text-center">
-                  Web Design is the art of creating visually appealing and functional 
-                  digital interfaces for websites and is something Brianna has been growing in 
-                  to show her creative and artistic side. 
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Development</h2>
-                <p class="s-description text-center">
-                  Web Development goes a little further than Web Design where Brianna can program, 
-                  code, optimize user experience, and functionality. This is the are Brianna is most
-                  interested in.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Sports Management</h2>
-                <p class="s-description text-center">
-                  Brianna's Sports Management minor is allowing her to learn all
-                   things sports. She would love to work in the sports field in 
-                   data analytics, digital media, or management.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Data Analytics</h2>
-                <p class="s-description text-center">
-                  Brianna is curerntly pursuing a Data Sciene minor and is looking
-                   forward to having this extra knowledge to use towards the sports 
-                   world or the tech world or maybe even both.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Full Stack Development</h2>
-                <p class="s-description text-center">
-                  Brianna is also interested in the whole process of front and back end development
-                  and would be interested in pursuing this oppertunity as well. Brianna's skills are 
-                  setting her up perfectly for a future career in this realm as well.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Entrepreneurship</h2>
-                <p class="s-description text-center">
-                  As of recent, Brianna has been interested in becoming an entrepreneur and would
-                  love to learn more of this. She hopes of opening up a business one day in the realm
-                  of athletics or nutrition!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/socb.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-check"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">PROJECTS COMPLETED</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="2.5" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">YEARS OF EXPERIENCE</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">TOTAL CLIENTS</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-award"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">AWARD WON</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Counter Section -->
-
-    
+  <script>
+    // Get the button
+    const backToTopButton = document.getElementById('backToTop');
+  
+    // When the user scrolls down 300px from the top, show the button
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+  
+    // When the button is clicked, scroll smoothly to the top
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
   
 
-    <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Blog
-              </h3>
-              <p class="subtitle-a">
-                **UNDER CONSTRUCTION**
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href=""><img src="assets/img/ai.jpeg" alt="" class="img-fluid"></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Technology</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="">The impacts of AI in humans lives today!</a></h3>
-                <p class="card-description">
-                  COMING SOON!
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img src="assets/img/aboutB2.jpg" alt="" class="avatar rounded-circle">
-                    <span class="author">Brianna Rawlings</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="bi bi-clock"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href=""><img src="assets/img/web.jpeg" alt="" class="img-fluid"></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Web Development</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="">What's new in web design and development today?</a></h3>
-                <p class="card-description">
-                  COMING SOON!
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img src="assets/img/aboutB2.jpg" alt="" class="avatar rounded-circle">
-                    <span class="author">Brianna Rawlings</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="bi bi-clock"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href=""><img src="assets/img/datascience.jpeg" alt="" class="img-fluid"></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Data with Athletes</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="">See the numbers behind the athletes!</a></h3>
-                <p class="card-description">
-                  COMING SOON!
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img src="assets/img/aboutB2.jpg" alt="" class="avatar rounded-circle">
-                    <span class="author">Brianna Rawlings</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="bi bi-clock"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Blog Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/B1.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Want To Connect??
-                      </h5>
-                    </div>
-                    <div>
-                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Message Me Today!!
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        You can send me a message here or I have put my email down below as well as links to all of my socials! Looking forward to hearing from you soon!
-                      </p>
-                      <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> 1847 S Main St Upland, IN 46062</li>
-                        <li><span class="bi bi-phone"></span> (702) 575-1873</li>
-                        <li><span class="bi bi-envelope"></span> brianna_rawlings@taylor.edu</li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="https://www.instagram.com/brawlings/"><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
-                        <li><a href="https://github.com/brawlings00"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
-                        <li><a href="https://www.linkedin.com/in/brianna-rawlings/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
+  <!-- ====== FOOTER ====== -->
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>BRawlings</strong>. All Rights Reserved</p>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    <p>&copy; 2025 Brianna Rawlings</p>
+  </footer>
 </body>
-
 </html>

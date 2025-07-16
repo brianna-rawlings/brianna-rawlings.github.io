@@ -1,0 +1,159 @@
+/* Google Fonts: Inter for a modern, simple feel */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #333333;
+  padding: 0 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0077cc; /* Accent color */
+}
+
+.hero {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+section {
+  padding: 5rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.project {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.project a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none; /* Hidden by default */
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #005fa3;
+}
+
+#projects {
+  padding: 5rem 0;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.project p {
+  padding: 0 1rem;
+  flex-grow: 1;
+}
+
+.project-links {
+  margin: 1rem;
+}
+
+.project-links a svg {
+  fill: #333;
+  transition: fill 0.3s;
+}
+
+.project-links a:hover svg {
+  fill: #0077cc; /* Accent color on hover */
+}
+
