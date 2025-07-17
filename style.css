@@ -110,12 +110,17 @@ footer {
 }
 
 .project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
 }
 
 .project {
+  flex: 0 0 300px;
+  height: 420px; /* You can tweak this height */
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -123,7 +128,14 @@ footer {
   transition: box-shadow 0.3s;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  scroll-snap-align: start;
+  background: white;
+  padding: 1rem;
+  box-sizing: border-box;
 }
+
+
 
 .project:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -132,28 +144,80 @@ footer {
 .project img {
   width: 100%;
   height: auto;
-  display: block;
+  max-height: 140px;
+  object-fit: contain; /* Instead of cover */
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
+
+
 .project h3 {
-  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  min-height: 2.5rem; /* Ensures one-line and two-line titles both fit */
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project p {
-  padding: 0 1rem;
-  flex-grow: 1;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Limits to 6 lines */
+  -webkit-box-orient: vertical;
 }
 
+
 .project-links {
-  margin: 1rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
 }
 
 .project-links a svg {
-  fill: #333;
-  transition: fill 0.3s;
+  width: 24px;
+  height: 24px;
 }
 
 .project-links a:hover svg {
   fill: #0077cc; /* Accent color on hover */
 }
 
+@media (max-width: 600px) {
+  .project {
+    flex: 0 0 85%;
+  }
+}
+
+.project .description {
+  max-height: 4.5rem;  /* Enough for ~3 lines */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+
+/* Optional: fade effect at the bottom to hint there's more */
+.project .description::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+/* On hover: expand the text */
+.project:hover .description {
+  max-height: 500px; /* Large enough to show full content */
+}
+
+.project:hover .description::after {
+  opacity: 0;
