@@ -107,6 +107,7 @@ footer {
 
 #projects {
   padding: 5rem 0;
+  overflow-x: hidden;
 }
 
 .project-list {
@@ -213,9 +214,31 @@ footer {
   background: transparent;
 }
 
-
-/* On hover: expand the text */
-.project:hover .description {
-  max-height: 500px; /* Large enough to show full content */
+#contact {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
 }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-list li {
+  margin: 0.5rem 0;
+}
+
+.contact-list a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+
 
