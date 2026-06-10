@@ -130,7 +130,7 @@
   .case:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(21,32,26,.4)}
   .case.featured{border-color:var(--gold-deep);box-shadow:0 0 0 1px var(--gold-deep) inset}
   .case-visual{
-    min-height:280px;position:relative;display:flex;align-items:flex-end;padding:24px;
+    min-height:280px;position:relative;display:flex;align-items:flex-end;padding:24px;overflow:hidden;
     background:linear-gradient(135deg,var(--pine),var(--pine-deep));
   }
   .case.v2 .case-visual{background:linear-gradient(135deg,#3a4a40,#243029)}
@@ -139,6 +139,8 @@
   .case.v5 .case-visual{background:linear-gradient(135deg,#2e5246,#1b332b)}
   .case-visual .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
   .case-shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+  .case-embed{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff}
+  .case-embed-site{position:absolute;top:0;left:0;width:200%;height:200%;border:0;background:#fff;transform:scale(.5);transform-origin:0 0;pointer-events:none}
   .case-visual .ph span{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:3.4rem;color:rgba(255,255,255,.10);letter-spacing:-.03em;text-align:center;line-height:.95;padding:0 20px}
   .case-visual .tag{
     position:relative;z-index:1;font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.1em;
@@ -261,8 +263,8 @@
     <!-- FEATURED: UX CLASS PROJECT (Figma) -->
     <article class="case featured reveal">
       <div class="case-visual">
-        <div class="ph"><span>Athlete&nbsp;Meal<br>Planner</span></div>
-        <span class="tag">Figma prototype</span>
+        <iframe class="case-embed" title="Athlete Meal Planner — interactive Figma prototype" loading="lazy" allowfullscreen src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FvhOmKdoaZ35nu9lt8o5w0X%2FHCI-project%3Fnode-id%3D33-2"></iframe>
+        <span class="tag">Live Figma prototype</span>
       </div>
       <div class="case-body">
         <span class="eyebrow">UX/UI · HCI Case Study</span>
@@ -280,8 +282,8 @@
     <!-- HEATHER & HICKORY -->
     <article class="case v2 reveal">
       <div class="case-visual">
-        <div class="ph"><span>Heather&nbsp;&amp;<br>Hickory</span></div>
-        <span class="tag">Brand + E-commerce</span>
+        <iframe class="case-embed-site" title="Heather & Hickory homepage (live preview)" loading="lazy" scrolling="no" src="https://heatherandhickory.com/"></iframe>
+        <span class="tag">Live site preview</span>
       </div>
       <div class="case-body">
         <span class="eyebrow">Brand + Web · Co-Founder</span>
@@ -311,16 +313,19 @@
     <!-- WHOOP -->
     <article class="case v3 reveal">
       <div class="case-visual">
-        <div class="ph"><span>WHOOP<br>Dashboard</span></div>
-        <span class="tag">Data product</span>
+        <iframe class="case-embed" title="WHOOP Recovery Dashboard (live Streamlit app)" loading="lazy" src="https://wearable-dashboard-nitfqisrqchcd2sizgzdzg.streamlit.app/?embed=true"></iframe>
+        <span class="tag">Live dashboard</span>
       </div>
       <div class="case-body">
         <span class="eyebrow">Data Product · Personal</span>
         <h3>WHOOP Recovery Dashboard</h3>
         <p class="ctx">Turn my own wearable data into something an athlete can actually read.</p>
-        <p class="did">Built an interactive dashboard exploring how sleep, strain, and HRV drive recovery — time-series views, a sleep-forecasting model, and clear visual hierarchy.</p>
+        <p class="did">Built an interactive dashboard exploring how sleep, strain, and HRV drive recovery — time-series trends, a sleep-performance model (R² 0.89), and clear visual hierarchy.</p>
         <div class="tags"><span>Python</span><span>Streamlit</span><span>Data viz</span></div>
-        <a class="case-link" href="https://github.com/brianna-rawlings/wearable-dashboard">View on GitHub →</a>
+        <div style="display:flex;flex-direction:column;gap:9px;align-items:flex-start;margin-top:22px">
+          <a class="case-link" style="margin-top:0" href="https://wearable-dashboard-nitfqisrqchcd2sizgzdzg.streamlit.app/">Open the live dashboard →</a>
+          <a class="case-link" style="margin-top:0" href="https://github.com/brianna-rawlings/wearable-dashboard">Code &amp; write-up on GitHub →</a>
+        </div>
       </div>
     </article>
 
