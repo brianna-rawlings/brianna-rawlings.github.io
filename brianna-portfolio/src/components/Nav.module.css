@@ -1,0 +1,51 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(250, 246, 240, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(196, 112, 79, 0.12);
+}
+.name {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: var(--charcoal);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+.links a {
+  text-decoration: none;
+  color: var(--mid);
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.links a:hover { color: var(--terracotta); }
+.resumeBtn {
+  background: var(--terracotta) !important;
+  color: white !important;
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  font-weight: 500 !important;
+  transition: background 0.2s, transform 0.15s !important;
+}
+.resumeBtn:hover {
+  background: var(--terra-light) !important;
+  transform: translateY(-1px) !important;
+}
+@media (max-width: 640px) {
+  .nav { padding: 1rem 1.5rem; }
+  .links { gap: 1.2rem; }
+  .links li:not(:last-child) { display: none; }
+}

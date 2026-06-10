@@ -1,0 +1,30 @@
+.section { padding: 6rem 2.5rem; background: var(--warm-white); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.heading { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--charcoal); margin-bottom: 1.4rem; line-height: 1.25; }
+.body { color: var(--mid); line-height: 1.85; margin-bottom: 1.1rem; font-size: 1rem; }
+.body strong { color: var(--charcoal); font-weight: 500; }
+.skillsSection { margin-top: 2rem; }
+.skillsGrid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.chip { padding: 0.3rem 0.8rem; background: var(--sand); border-radius: 6px; font-size: 0.78rem; color: var(--mid); }
+.cardCol { display: flex; flex-direction: column; gap: 1.2rem; }
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  border: 1px solid var(--sand);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(44,40,37,0.08); }
+.cardAccent { position: absolute; top: 0; right: 0; width: 60px; height: 60px; border-radius: 0 16px 0 60px; }
+.accent_terra .cardAccent  { background: rgba(196,112,79,0.12); }
+.accent_forest .cardAccent { background: rgba(61,90,71,0.10); }
+.accent_sand .cardAccent   { background: rgba(232,221,208,0.6); }
+.cardIcon  { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.cardTitle { font-family: 'Lora', serif; font-size: 1rem; color: var(--charcoal); margin-bottom: 0.3rem; }
+.cardDesc  { font-size: 0.85rem; color: var(--light-text); line-height: 1.5; }
+@media (max-width: 768px) {
+  .section { padding: 4rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
